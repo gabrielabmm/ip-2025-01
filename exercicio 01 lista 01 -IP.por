@@ -2,7 +2,7 @@
 
 programa
 {
-	inclua biblioteca Matematica --> mat
+	inclua biblioteca Matematica --> Mat
 	
 	funcao inicio()
 	{
@@ -22,7 +22,7 @@ programa
 		/* Calcula a média final do usuário */
 		media = (nota1 + nota2 + nota3) / 3
 		
-		escreva ("Sua média é:", media) 
+		escreva ("Sua média é:", Mat.arredondar(media, 2))
 		escreva ("\n")
 		se (media >= 7)
 		{
@@ -36,3 +36,5 @@ programa
 		escreva("\n")
 	}
 }
+
+
