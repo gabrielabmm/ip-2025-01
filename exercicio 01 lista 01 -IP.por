@@ -36,4 +36,3 @@ programa
 		escreva("\n")
 	}
 }
-
