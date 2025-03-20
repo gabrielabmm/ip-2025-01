@@ -9,7 +9,7 @@ caracter c, C, R, r, I, i, tipo
     escreva ("Qual é o consumo de água por metros cúbicos? \n")
     leia (consumo)
 
-    escreva ("Qual o tipo de consumidor? (C - Comercial, R - Residencial, I - Industrial) \n")
+    escreva ("Qual o tipo de consumidor? (C - Comercial, R - Residencial, I - Industrial) \n)")
     leia (tipo)
 
     escreva ("CONTA=", contaAgua)
