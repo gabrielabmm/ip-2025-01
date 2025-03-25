@@ -19,7 +19,6 @@ programa
 		escreva("Digite a terceira nota: ")
 		leia(nota3)
 
-		/* Calcula a média final do usuário */
 		media = (nota1 + nota2 + nota3) / 3
 		
 		escreva ("Sua média é:", Mat.arredondar(media, 2))
