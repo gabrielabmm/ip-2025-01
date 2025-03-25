@@ -11,7 +11,7 @@ real soma = 0
     se (numero > 1) {
     para (i=0; i <= numero; i++) 
     soma = (1.0 / (i+1)) + soma 
-    mat.arredondar (soma, 6)
+    
    escreva (mat.arredondar (soma, 6)) }
     
     senao {
