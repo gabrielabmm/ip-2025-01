@@ -26,7 +26,6 @@ programa {
       escreva ("Qual a percentagem de pessoas que compraram na categoria Cadeiras?\n")
       leia (percCa)
 
-      // Ajuste no cálculo da renda total
       renda1 = (numPessoas * percPo) / 100
       renda2 = (numPessoas * percGe * 5) / 100
       renda3 = (numPessoas * percAr * 10) / 100
@@ -34,11 +33,7 @@ programa {
 
       rendaTotal = renda1 + renda2 + renda3 + renda4
 
-      
-    }
-
-    para (i = 1; i <= numJogos; i++) {
-      escreva ("A renda do jogo ", i, " é ", rendaTotal, "\n\n")
+      escreva ("A renda do jogo ", i, " é ", mat.arredondar (rendaTotal, 2) , "\n")
     }
   }
 }
