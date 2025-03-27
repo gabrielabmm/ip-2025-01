@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var i, num, numF, resultado int64
+
+	fmt.Println("Digite um número inteiro")
+	fmt.Scan(&num)
+
+	for i < num {
+		numF = num
+    numF *= (num - i)
+		resultado += numF
+		i++
+	}
+
+	fmt.Println(num, "! = ", numF)
+}
