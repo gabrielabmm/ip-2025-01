@@ -15,14 +15,14 @@ func main() {
 
 			fmt.Println("Quais são as oito notas das provas?")
 			{
-				for i=0; i < 8; i++ {
+				for i = 0; i < 8; i++ {
 					fmt.Scan(&notaPr[i])
 					somaPr += notaPr[i]
 				}
 
 				fmt.Println("Quais são as cinco notas obtidas pela lista de exercícios?")
 				{
-					for i=0; i < 5; i++{
+					for i = 0; i < 5; i++ {
 						fmt.Scan(&notaEx[i])
 						somaEx += notaEx[i]
 					}
@@ -47,8 +47,8 @@ func main() {
 					} else {
 						fmt.Println("Matrícula: ", matricula, ", Nota final:", mediaN, "Situação final: REPROVADO POR NOTA E FREQUÊNCIA")
 					}
-                                     }
-			        }
-                          }
-                     }
-                }
+				}
+			}
+		}
+	}
+}
