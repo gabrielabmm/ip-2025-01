@@ -5,10 +5,6 @@ import (
 	"math"
 )
 
-func RoundToTwoDecimals(media float64) float64 {
-	return math.Round(media*100) / 100
-}
-
 func main() {
 
 	var nota1, nota2, nota3 float64
@@ -24,7 +20,7 @@ func main() {
 
 	media := (nota1 + nota2 + nota3) / 3
 
-	fmt.Printf("Sua média é: %.2f ", media)
+	fmt.Printf("Sua média é: %0.2f ", media)
 	fmt.Printf("\n")
 
 	if media >= 6 {
