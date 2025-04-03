@@ -1,0 +1,33 @@
+package main 
+
+import "fmt"
+import "math"
+
+
+	func main() {
+	
+		var nota1, nota2, nota3 float64
+
+		
+		fmt.Println ("Digite a primeira nota: ")
+		fmt.Scan (&nota1)
+
+		fmt.Println("Digite a segunda nota: ")
+		fmt.Scan (&nota2)
+
+		fmt.Println ("Digite a terceira nota: ")
+		fmt.Scan (&nota3)
+
+		mediaInicial := (nota1 + nota2 + nota3) / 3
+		mediaFinal := math.Round (mediaInicial)
+		
+		fmt.Printf ("Sua média é: %.f", mediaFinal)
+		fmt.Println ("\n")
+		
+		if (mediaFinal >= 6) {
+		 	fmt.Println ("APROVADO")
+		} else 
+			{fmt.Println ("REPROVADO") }
+
+		fmt.Println ("\n")
+	}
