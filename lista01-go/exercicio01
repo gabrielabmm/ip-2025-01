@@ -1,33 +1,37 @@
-package main 
+package main
 
-import "fmt"
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
+func RoundToTwoDecimals(media float64) float64 {
+	return math.Round(media*100) / 100
+}
 
-	func main() {
-	
-		var nota1, nota2, nota3 float64
+func main() {
 
-		
-		fmt.Println ("Digite a primeira nota: ")
-		fmt.Scan (&nota1)
+	var nota1, nota2, nota3 float64
 
-		fmt.Println("Digite a segunda nota: ")
-		fmt.Scan (&nota2)
+	fmt.Println("Digite a primeira nota: ")
+	fmt.Scan(&nota1)
 
-		fmt.Println ("Digite a terceira nota: ")
-		fmt.Scan (&nota3)
+	fmt.Println("Digite a segunda nota: ")
+	fmt.Scan(&nota2)
 
-		mediaInicial := (nota1 + nota2 + nota3) / 3
-		mediaFinal := math.Round (mediaInicial)
-		
-		fmt.Printf ("Sua média é: %.f", mediaFinal)
-		fmt.Println ("\n")
-		
-		if (mediaFinal >= 6) {
-		 	fmt.Println ("APROVADO")
-		} else 
-			{fmt.Println ("REPROVADO") }
+	fmt.Println("Digite a terceira nota: ")
+	fmt.Scan(&nota3)
 
-		fmt.Println ("\n")
+	media := (nota1 + nota2 + nota3) / 3
+
+	fmt.Printf("Sua média é: %.2f ", media)
+	fmt.Printf("\n")
+
+	if media >= 6 {
+		fmt.Printf(" APROVADO")
+
+	} else {
+		fmt.Printf(" REPROVADO")
 	}
+
+}
