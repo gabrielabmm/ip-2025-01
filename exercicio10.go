@@ -11,6 +11,7 @@ var preco[] float64
 var qntd[] float64
 var lucroobt[] float64
 var lucroobt2[] float64
+var tamanho int
 
 fmt.Scan(&P_inicial, &D, &DeltaP, &P_min, &Q_inicial, &DeltaQ)
 
@@ -24,6 +25,8 @@ qntd = append(qntd, (Q_inicial + DeltaQ * i))
 
 lucroobt = append(lucroobt, lucro)
 lucroobt2 = append(lucroobt2, lucro)
+
+tamanho += 1
 }
 
 }
@@ -31,9 +34,7 @@ lucroobt2 = append(lucroobt2, lucro)
 sort.Float64s(lucroobt2)
 
 
-vetor := []float64{lucroobt}
-
-for j:=0; j< len(vetor); j++{
+for j:=0; j< tamanho; j++{
 
 if (lucroobt[j] == lucroobt2[0]){
 indice := j
@@ -42,7 +43,14 @@ indice := j
 
 fmt.Printf("%-10s %-10s %-10s\n", "Preco", "Ingressos Vendidos", "Lucro")
 
-for x, val := range preco{
-	fmt.Printf("%-10d", val)
-}
+for i=0; i< tamanho; i++{
+	fmt.Printf("%-10d \n", preco[i])}
+
+	for i=0; i< tamanho; i++{
+		fmt.Printf("%-10d \n", qntd[i])}
+
+		for i=0; i< tamanho; i++{
+			fmt.Printf("%-10d \n", lucroobt[i])}
+			
+			fmt.Printf("Preco min %-10d" preco[indice])
 }
