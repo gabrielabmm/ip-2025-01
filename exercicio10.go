@@ -13,7 +13,7 @@ var lucroobt[] float64
 var lucroobt2[] float64
 var tamanho int
 
-fmt.Scan(&P_inicial, &D, &DeltaP, &P_min, &Q_inicial, &DeltaQ)
+fmt.Scan(&P_inicial, &Q_inicial, &D, &DeltaP, &DeltaQ, &P_min)
 
 for i=0; P_inicial - DeltaP*i >= P_min; i++{
 
@@ -46,10 +46,10 @@ break
 fmt.Printf("%-20s %-20s %-20s\n", "Preco", "Ingressos Vendidos", "Lucro")
 
 for q := 0; q < tamanho; q++ {
-	fmt.Printf("%-20.2f %-20.2f %-20.2f\n", preco[q], qntd[q], lucroobt[q])
+	fmt.Printf("%-20.2f %-20.f %-20.2f\n", preco[q], qntd[q], lucroobt[q])
 }
 
-fmt.Println("\nMelhor opção:")
-fmt.Printf("Preço: %.2f, Ingressos vendidos: %.2f, Lucro: %.2f\n", precox, ingressosx, lucrox)
+fmt.Printf("Lucro maximo: %.2f\n", lucrox)
+fmt.Printf("Na faixa de preco: %.2f com %.f ingressos.\n", precox, ingressosx)
 			
 }
