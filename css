@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+h1 {
+   
+    font-family: 'Honk';
+    color: #000080; 
+    font-size: 50px;
+    text-align: center;
+}
+
+
+h2 {
+    font-family: 'DM Sans';
+    color: #000080;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: white; 
+    }
+    
+    .container {
+        flex-direction: column; 
+    }
+}
+
+
+body {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/883fda71-46ba-4365-bbca-8e7e79419d83/dfyp0rz-7d45fa9e-28e9-41de-9693-d21f1fd087c3.png/v1/fill/w_1280,h_720,q_80,strp/sonic_r_wallpapers_by_seagullmoe_dfyp0rz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvODgzZmRhNzEtNDZiYS00MzY1LWJiY2EtOGU3ZTc5NDE5ZDgzXC9kZnlwMHJ6LTdkNDVmYTllLTI4ZTktNDFkZS05NjkzLWQyMWYxZmQwODdjMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.7sOE1gNbnG4VkdbgV386K7LRqSki4LcNMzzB92mAIlM');
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+
+
+
+
+
+
