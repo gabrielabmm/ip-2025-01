@@ -1,1 +1,59 @@
+CREATE TABLE ProfissionalSaude (
+id_profissional SERIAL PRIMARY KEY,
+nome_profissional VARCHAR,
+cpf_profissional CHAR(11),
+email_profissional VARCHAR 
+
+)
+
+CREATE TYPE resposta_simples AS ENUM ('Sim', 'Não', 'Não sabe');
+
+CREATE TYPE resposta_corrimento AS ENUM ('Sim', 'Não', 'Não sabe', 'Não lembra');
+
+CREATE TYPE resposta_sangramento AS ENUM (
+    'Sim',
+    'Não',
+    'Não sabe',
+    'Não lembra',
+    'Não está em menopausa'
+);
+
+CREATE TYPE resposta_menopausa AS ENUM ('Sim', 'Não', 'Não lembra');
+
+CREATE TYPE tipo_exame AS ENUM ('Rastreamento', 'Seguimento');
+
+CREATE TABLE ExameCitopoatologico (
+    id SERIAL PRIMARY KEY,
+	id_profissional VARCHAR,
+    mulher_id INTEGER REFERENCES mulher(id),
+
+    motivo_exame tipo_exame,
+
+    primeira_vez_exame resposta_simples,
+    usa_diu resposta_simples,
+    usa_anticoncepcional resposta_simples,
+    esta_gestante resposta_simples,
+    usa_hormonio resposta_simples,
+    ja_fez_radioterapia resposta_simples,
+
+    data_ultima_menstruacao DATE,
+    esta_menopausa resposta_menopausa,
+    teve_corrimento resposta_corrimento,
+    teve_sangramento_anormal resposta_sangramento
+)
+
+CREATE TYPE status_exame AS ENUM ('Aprovado', 'Rejeitado', 'Pendente');
+
+CREATE TABLE Resultado_Exame (
+ id SERIAL PRIMARY KEY,
+ExameCitopoatologico_id INTEGER REFERENCES ExameCitopoatologico(id) ON DELETE CASCADE
+ 
+    status status_exame,
+    resultado VARCHAR(255),
+    motivo_rejeicao TEXT,
+    observacoes TEXT,
+
+    data_avaliacao DATE DEFAULT CURRENT_DATE,
+    profissional_responsavel VARCHAR(255)
+);
 
